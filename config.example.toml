@@ -1,0 +1,46 @@
+# toggl-switch config
+#
+# Location:
+#   Linux / Termux: ~/.config/toggl-switch/config.toml
+#   Windows:        %APPDATA%\toggl-switch\config.toml
+#   (or anywhere, pointed to by the TOGGL_SWITCH_CONFIG environment variable)
+#
+# Your API token is at https://track.toggl.com/profile (bottom of the page).
+# You can leave it out here and set TOGGL_API_TOKEN instead.
+api_token = "paste-your-token-here"
+
+# Optional: defaults to your Toggl default workspace.
+# workspace_id = 1234567
+
+# Show a desktop notification / Android toast after each switch.
+notify = true
+
+# One table per button. The name after "presets." is what you pass on the
+# command line:  toggl-switch grading
+#
+#   description  text of the time entry
+#   project      project name (case-insensitive) or numeric project id; optional
+#   tags         list of tag names; optional
+#   billable     true/false; optional
+#   label        name shown on generated shortcuts; optional (defaults to the preset name)
+
+[presets.grading]
+label = "Grading"
+description = "Grading"
+project = "MATH 228"
+tags = ["teaching"]
+
+[presets.prep]
+label = "Class prep"
+description = "Class prep"
+project = "MATH 228"
+tags = ["teaching"]
+
+[presets.email]
+label = "Email"
+description = "Email & admin"
+
+[presets.pretext]
+label = "pretext.plus"
+description = "pretext.plus development"
+project = "pretext.plus"
